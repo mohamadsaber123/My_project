@@ -6,7 +6,7 @@ import random
 
 df = pd.read_csv("MCQ1.csv")
 df.columns = df.columns.str.strip()
-model = st.SentenceTransformer("all-mpnet-base-v2")
+model = st.SentenceTransformer("paraphrase-MiniLM-L6-v2")
 
 questions = list(df["Question"])
 question_embeddings = model.encode(questions, normalize_embeddings=True)
